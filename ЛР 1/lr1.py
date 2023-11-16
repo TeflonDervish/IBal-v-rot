@@ -2,8 +2,7 @@ import random
 import string
 
 def generate_password(length=8):
-    
-    length = max(length, 4)
+    length = max(length, 6)
     
     lowercase_letters = string.ascii_lowercase
     uppercase_letters = string.ascii_uppercase
@@ -11,12 +10,10 @@ def generate_password(length=8):
 
     all_characters = lowercase_letters + uppercase_letters + digits
 
-    first_char = random.choice(string.ascii_letters)
-    password = first_char + ''.join(random.choice(all_characters) for _ in range(length - 1))
+    password = ''.join(random.choice(all_characters) for _ in range(length))
 
     return password
 
-n = int(input("Enter symbols count: "))
 
-generated_password = generate_password(n)
+generated_password = generate_password(2)
 print(generated_password)
