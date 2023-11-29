@@ -72,11 +72,11 @@ def decrypt_playfair(cipher_text, key):
 
     return plain_text
 
-# Пример использования
-key = "DEVELOPMENT"
-plain_text = "SEMENOV"
-cipher_text = encrypt_playfair(plain_text, key)
-decrypted_text = decrypt_playfair(cipher_text, key)
+# Пример использовани
+key = "NINE"
+plain_text = "SAMIUPKAFE"
+cipher_text = decrypt_playfair(plain_text, key)
+decrypted_text = encrypt_playfair(cipher_text, key)
 
 print(f"Original Text: {plain_text}")
 print(f"Encrypted Text: {cipher_text}")
